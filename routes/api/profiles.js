@@ -57,6 +57,15 @@ router.get("/:id", passport.authenticate("jwt", { session: false }), (req, res) 
 router.post("/edit/:id", passport.authenticate("jwt", { session: false }), (req, res) => {
   const profileFields = {};
 
+  if(req.body) {
+    profileFields.type = req.body.type;
+    profileFields.describe = req.body.describe;
+    profileFields.income = req.body.income;
+    profileFields.expend = req.body.expend;
+    profileFields.cash = req.body.cash;
+    profileFields.remark = req.body.remark;
+  }
+
   Profile.findOneAndUpdate(
     {_id: req.params.id},
     {$set: profileFields},

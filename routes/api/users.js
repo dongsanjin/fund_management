@@ -70,7 +70,7 @@ router.post("/login", (req, res) => {
                   }
 
                   // 获取token
-                  jwt.sign(rule,keys.secretOrKey,{expiresIn:'1h'},(err, token) => {
+                  jwt.sign(rule,keys.secretOrKey,{expiresIn:'24h'},(err, token) => {
                     if(err) throw err;
                     res.json({
                       success: true,

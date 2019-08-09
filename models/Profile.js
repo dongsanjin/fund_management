@@ -25,7 +25,7 @@ const ProfileSchema = new Schema({
   },
   date: {
     type: String,
-    default: Date.now
+    default: new Date().toLocaleString()
   }
 })
 

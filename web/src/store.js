@@ -43,6 +43,10 @@ export default new Vuex.Store({
     },
     setUser: ({commit}, user) => {
       commit(types.SET_USER,user);
+    },
+    quitCurrentUser: ({commit}) => {
+      commit(types.SET_AUTHENTICATED, false);
+      commit(types.SET_USER, null);
     }
   }
 })

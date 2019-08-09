@@ -119,7 +119,7 @@ export default {
         if (valid) {
           this.$axios
             .post("/api/users/register", this.registerUser)
-            .then(res => {
+            .then(() => {
               this.$message({
                 message: "注册成功",
                 type: "success"
@@ -127,7 +127,7 @@ export default {
             });
           this.$router.push("/login");
         } else {
-          console.log("表单验证失败，请正确填写");
+          alert("表单验证失败，请正确填写");
           return false;
         }
       });
