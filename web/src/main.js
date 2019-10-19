@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import axios from './http'
 import './assets/css/reset.css'
+import './assets/css/iconfont.css'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';

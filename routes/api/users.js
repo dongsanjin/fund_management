@@ -76,7 +76,7 @@ router.post("/login", (req, res) => {
                       success: true,
                       // token 前面必须加上Bearer{+空格}字符串才能通过验证
                       token:"Bearer " + token
-                    })  
+                    })
                   })
                 }else {
                   return res.status(400).json("密码错误")

@@ -79,8 +79,8 @@ export default {
               // 在vuex中存储token
               this.$store.dispatch('setAuthenticated', !this.isEmpty(decoded));
               this.$store.dispatch('setUser', decoded);
+              this.$router.push("/home");
             });
-          this.$router.push("/home");
         }
       });
     },
